@@ -1,4 +1,4 @@
-package com.shopease.shopease_server
+package com.shopease.server
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

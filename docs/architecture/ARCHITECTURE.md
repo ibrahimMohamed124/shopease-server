@@ -17,6 +17,8 @@ Use a stable Spring Boot release compatible with the project's Kotlin/JDK and de
 
 ## Package-by-feature structure
 
+The current Kotlin source is still a project skeleton. Its application entry point uses the documented `com.shopease.server` base package. No feature module has been implemented yet; the tree below describes target locations and must not be read as evidence that those features already exist.
+
 Illustrative structure; create only packages needed by actual features:
 
 ```text
@@ -29,6 +31,9 @@ com.shopease.server
 │   ├── web
 │   └── observability
 ├── identity
+│   ├── auth
+│   ├── users
+│   └── shared
 ├── catalog
 ├── cart
 ├── wishlist
@@ -54,7 +59,7 @@ Each feature module may use these internal areas when useful:
 └── infrastructure/      # JPA mappings, repository adapters, provider integrations
 ```
 
-This is a guide, not a mandate to create empty folders or four layers for every trivial feature. Keep simple features simple.
+This is a guide, not a mandate to create empty folders or four layers for every trivial feature. Keep simple features simple. Create identity subpackages with their first real implementation rather than committing empty package placeholders. See [IDENTITY_MODULE_BOUNDARIES.md](../migration/IDENTITY_MODULE_BOUNDARIES.md) for current ownership and migration notes.
 
 ## Dependency direction
 
