@@ -4,6 +4,8 @@ This document defines initial ownership hypotheses. Validate them against the le
 
 ## Initial module map
 
+The target application currently has no implemented feature modules. For the identity ownership inventory and evidence still needed from the legacy system, see [Identity Module Boundaries](../migration/IDENTITY_MODULE_BOUNDARIES.md). Treat this table as an ownership hypothesis until that legacy audit is complete.
+
 | Module | Owns | Must not own |
 |---|---|---|
 | `identity` | user identity, credentials, login, refresh tokens, password reset, authentication lifecycle | product/order business rules |
